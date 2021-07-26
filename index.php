@@ -13,12 +13,18 @@
 	<link href="assets/css/font-icon.css" rel="stylesheet">
 	<link href="assets/css/styles.css" rel="stylesheet">
 	<link href="assets/css/responsive.css" rel="stylesheet">
+	<link href="assets/css/custom.css" rel="stylesheet">
+	<!--<link href="assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet">-->
+	<link href="assets/css/fontawesome-free-5.15.3-web/css/fontawesome.min.css" rel="stylesheet">
+	<link href="assets/css/fontawesome-free-5.15.3-web/css/brands.min.css" rel="stylesheet">
+	<link href="assets/css/fontawesome-free-5.15.3-web/css/solid.min.css" rel="stylesheet">
 	<link rel="icon" type="image/png" href="assets/images/logo-black.png">
 	
 </head>
 <body>
 	<?php require_once('Admin/Api/koneksi.php'); ?>
 	<!-- start = Menu -->
+	<!--
 	<header>
 		<div class="container">
 			<a class="logo" href="#"><img src="assets/images/logo-white.png" alt="Logo"></a>
@@ -34,6 +40,26 @@
 			</ul>
 		</div>
 	</header>
+	-->
+
+	<nav class="navbar fixed-bottom col-md-12">
+		<div class="navbar-container col-md-8 offset-md-2" style="background-color:#b06ab6">
+			<div class="container-fluid justify-content-start row" style="padding:20px 5px 20px 5px">
+				<div class="col-md-3">
+					<a href="index.php" style="vertical-align:middle;color:#f3f3f3" title="BERANDA"><i class="fa fa-home fa-4x zoom"></i></a>
+				</div>
+				<div class="col-md-3">
+					<a href="#sambutan" style="vertical-align:middle;color:#f3f3f3" title="SAMBUTAN"><i class="fa fa-book-open fa-4x zoom"></i></a>
+				</div>
+				<div class="col-md-3">
+					<a href="#ceritaKita" style="vertical-align:middle;color:#f3f3f3" title="CERITA KITA"><i class="fa fa-heart fa-4x zoom"></i></a>
+				</div>
+				<div class="col-md-3">
+					<a href="#gallery" style="vertical-align:middle;color:#f3f3f3" title="GALERI"><i class="fa fa-images fa-4x zoom"></i></a>
+				</div>
+			</div>
+		</div>
+	</nav>
 	<!-- end = menu -->
 	
 	
@@ -63,7 +89,6 @@
 				$("#icon_audio").attr('src', 'Admin/assets/sound_image/play.png');
 			};
 		}
-		
 	</script>
 	
 	<div class="main-slider" style="background:url(Admin/fileUpload/<?php echo $infoResepsi['fileGambar'];?>); background-size:cover;"  >
