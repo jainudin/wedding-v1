@@ -43,21 +43,29 @@
 	-->
 
 	<nav class="navbar fixed-bottom col-md-12">
-		<div class="navbar-container col-md-8 offset-md-2" style="background-color:#b06ab6">
-			<div class="container-fluid justify-content-start row" style="padding:20px 5px 20px 5px">
-				<div class="col-md-3">
+		<div class="navbar-container col-md-8 offset-md-2" style="background-color:#b06ab6;padding:20px 5px 20px 5px">
+			<table style="width:100%">
+				<tr>
+					<td class="navbar-icon"> <a href="#" style="vertical-align:middle;color:#f3f3f3" title="BERANDA1"><i class="fa fa-home fa-4x fa-2x zoom"></i></a> </td>
+					<td class="navbar-icon"> <a href="#sambutan" style="vertical-align:middle;color:#f3f3f3" title="SAMBUTAN"><i class="fa fa-book-open fa-4x zoom"></i></a> </td>
+					<td class="navbar-icon"> <a href="#ceritaKita" style="vertical-align:middle;color:#f3f3f3" title="CERITA KITA"><i class="fa fa-heart fa-4x zoom"></i></a> </td>
+					<td class="navbar-icon"> <a href="#gallery" style="vertical-align:middle;color:#f3f3f3" title="GALERI"><i class="fa fa-images fa-4x zoom"></i></a> </td>
+				</tr>
+			</table>
+			<!--<div class="container-fluid justify-content-start row" style="padding:20px 5px 20px 5px">
+				<div class="col-xs col-sm col-md col-lg">
 					<a href="index.php" style="vertical-align:middle;color:#f3f3f3" title="BERANDA"><i class="fa fa-home fa-4x zoom"></i></a>
 				</div>
-				<div class="col-md-3">
+				<div class="col-xs col-sm col-md col-lg">
 					<a href="#sambutan" style="vertical-align:middle;color:#f3f3f3" title="SAMBUTAN"><i class="fa fa-book-open fa-4x zoom"></i></a>
 				</div>
-				<div class="col-md-3">
+				<div class="col-xs col-sm col-md col-lg">
 					<a href="#ceritaKita" style="vertical-align:middle;color:#f3f3f3" title="CERITA KITA"><i class="fa fa-heart fa-4x zoom"></i></a>
 				</div>
-				<div class="col-md-3">
+				<div class="col-xs col-sm col-md col-lg">
 					<a href="#gallery" style="vertical-align:middle;color:#f3f3f3" title="GALERI"><i class="fa fa-images fa-4x zoom"></i></a>
 				</div>
-			</div>
+			</div>-->
 		</div>
 	</nav>
 	<!-- end = menu -->
@@ -443,6 +451,121 @@
 	<script src="assets/js/jquery.countdown.min.js"></script>
 	<script src="assets/js/jquery.fluidbox.min.js"></script>
 	<script src="assets/js/scripts.js"></script>
+	<script>
+		$(window).resize(function() {
+			var window_width = $( window ).width();
+			console.log(window_width);
+			if(window_width < 720){
+				$(".navbar").attr("style","transform: scale(1, 0.6);transition: transform .2s;");
+				$(".navbar-icon").attr("style","transform: scale(0.6, 1.1);transition: transform .2s;");
+			}
+			else if(window_width < 930){
+				$(".navbar").attr("style","transform: scale(1, 0.8)");
+				$(".navbar-icon").attr("style","transform: scale(0.8, 1)");
+			}
+			else if(window_width < 1040){
+				$(".navbar-container").removeClass(function (index, className) {
+					return (className.match (/(^|\s)col-\S+/g)).join(' ');
+				}).removeClass(function (index, className) {
+					return (className.match (/(^|\s)offset-\S+/g)).join(' ');
+				}).addClass("col-md-12 offset-md-0");
+				$(".navbar").attr("style","transform: scale(1, 1.0);transition: transform .2s;");
+				$(".navbar-icon").attr("style","transform: scale(1.0, 1);transition: transform .2s;");
+			}
+			else if(window_width < 1270){
+				$(".navbar-container").removeClass(function (index, className) {
+					return (className.match (/(^|\s)col-\S+/g)).join(' ');
+				}).removeClass(function (index, className) {
+					return (className.match (/(^|\s)offset-\S+/g)).join(' ');
+				}).addClass("col-md-10 offset-md-1");
+				$(".navbar").attr("style","transform: scale(1, 1.0);transition: transform .2s;");
+				$(".navbar-icon").attr("style","transform: scale(1.0, 1);transition: transform .2s;");
+			}
+			
+			if(window_width >= 1270){
+				$(".navbar-container").removeClass(function (index, className) {
+					return (className.match (/(^|\s)col-\S+/g)).join(' ');
+				}).removeClass(function (index, className) {
+					return (className.match (/(^|\s)offset-\S+/g)).join(' ');
+				}).addClass("col-md-8 offset-md-2");
+				$(".navbar").attr("style","transform: scale(1, 1.0);transition: transform .2s;");
+				$(".navbar-icon").attr("style","transform: scale(1.0, 1);transition: transform .2s;");
+			}
+			else if(window_width >= 1040){
+				$(".navbar-container").removeClass(function (index, className) {
+					return (className.match (/(^|\s)col-\S+/g)).join(' ');
+				}).removeClass(function (index, className) {
+					return (className.match (/(^|\s)offset-\S+/g)).join(' ');
+				}).addClass("col-md-10 offset-md-1");
+				$(".navbar").attr("style","transform: scale(1, 1.0);transition: transform .2s;");
+				$(".navbar-icon").attr("style","transform: scale(1.0, 1);transition: transform .2s;");
+			}
+			else if(window_width >= 930){
+				$(".navbar").attr("style","transform: scale(1, 1.0);transition: transform .2s;");
+				$(".navbar-icon").attr("style","transform: scale(1.0, 1);transition: transform .2s;");
+			}
+			else if(window_width >= 720){
+				$(".navbar").attr("style","transform: scale(1, 0.8);transition: transform .2s;");
+				$(".navbar-icon").attr("style","transform: scale(0.8, 1);transition: transform .2s;");
+			}
+		});
+
+		var window_width = $( window ).width();
+		console.log(window_width);
+		if(window_width < 720){
+			$(".navbar").attr("style","transform: scale(1, 0.6);transition: transform .2s;");
+			$(".navbar-icon").attr("style","transform: scale(0.6, 1.1);transition: transform .2s;");
+		}
+		else if(window_width < 930){
+			$(".navbar").attr("style","transform: scale(1, 0.8)");
+			$(".navbar-icon").attr("style","transform: scale(0.8, 1)");
+		}
+		else if(window_width < 1040){
+			$(".navbar-container").removeClass(function (index, className) {
+				return (className.match (/(^|\s)col-\S+/g)).join(' ');
+			}).removeClass(function (index, className) {
+				return (className.match (/(^|\s)offset-\S+/g)).join(' ');
+			}).addClass("col-md-12 offset-md-0");
+			$(".navbar").attr("style","transform: scale(1, 1.0);transition: transform .2s;");
+			$(".navbar-icon").attr("style","transform: scale(1.0, 1);transition: transform .2s;");
+		}
+		else if(window_width < 1270){
+			$(".navbar-container").removeClass(function (index, className) {
+				return (className.match (/(^|\s)col-\S+/g)).join(' ');
+			}).removeClass(function (index, className) {
+				return (className.match (/(^|\s)offset-\S+/g)).join(' ');
+			}).addClass("col-md-10 offset-md-1");
+			$(".navbar").attr("style","transform: scale(1, 1.0);transition: transform .2s;");
+			$(".navbar-icon").attr("style","transform: scale(1.0, 1);transition: transform .2s;");
+		}
+		
+		if(window_width >= 1270){
+			$(".navbar-container").removeClass(function (index, className) {
+				return (className.match (/(^|\s)col-\S+/g)).join(' ');
+			}).removeClass(function (index, className) {
+				return (className.match (/(^|\s)offset-\S+/g)).join(' ');
+			}).addClass("col-md-8 offset-md-2");
+			$(".navbar").attr("style","transform: scale(1, 1.0);transition: transform .2s;");
+			$(".navbar-icon").attr("style","transform: scale(1.0, 1);transition: transform .2s;");
+		}
+		else if(window_width >= 1040){
+			$(".navbar-container").removeClass(function (index, className) {
+				return (className.match (/(^|\s)col-\S+/g)).join(' ');
+			}).removeClass(function (index, className) {
+				return (className.match (/(^|\s)offset-\S+/g)).join(' ');
+			}).addClass("col-md-10 offset-md-1");
+			$(".navbar").attr("style","transform: scale(1, 1.0);transition: transform .2s;");
+			$(".navbar-icon").attr("style","transform: scale(1.0, 1);transition: transform .2s;");
+		}
+		else if(window_width >= 930){
+			$(".navbar").attr("style","transform: scale(1, 1.0);transition: transform .2s;");
+			$(".navbar-icon").attr("style","transform: scale(1.0, 1);transition: transform .2s;");
+		}
+		else if(window_width >= 720){
+			$(".navbar").attr("style","transform: scale(1, 0.8);transition: transform .2s;");
+			$(".navbar-icon").attr("style","transform: scale(0.8, 1);transition: transform .2s;");
+		}
+	</script>
 	
 </body>
 </html>
