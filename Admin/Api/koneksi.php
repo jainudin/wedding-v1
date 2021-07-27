@@ -3,7 +3,7 @@
 require_once "parser-php-version.php";
 
 //$mysql_host = "localhost";
-$mysql_host = "localhost:50000";
+$mysql_host = "localhost";
 $mysql_user = "root";
 //$mysql_pass = "";
 $mysql_pass = "GL-System123";
