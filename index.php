@@ -46,7 +46,7 @@
 		<div class="navbar-container col-md-8 offset-md-2" style="background-color:#b06ab6;padding:20px 5px 20px 5px">
 			<table style="width:100%">
 				<tr>
-					<td class="navbar-icon"> <a href="#" style="vertical-align:middle;color:#f3f3f3" title="BERANDA"><i class="fa fa-home fa-4x fa-2x zoom"></i></a> </td>
+					<td class="navbar-icon"> <a href="#" style="vertical-align:middle;color:#f3f3f3" title="BERANDA1"><i class="fa fa-home fa-4x fa-2x zoom"></i></a> </td>
 					<td class="navbar-icon"> <a href="#sambutan" style="vertical-align:middle;color:#f3f3f3" title="SAMBUTAN"><i class="fa fa-book-open fa-4x zoom"></i></a> </td>
 					<td class="navbar-icon"> <a href="#ceritaKita" style="vertical-align:middle;color:#f3f3f3" title="CERITA KITA"><i class="fa fa-heart fa-4x zoom"></i></a> </td>
 					<td class="navbar-icon"> <a href="#gallery" style="vertical-align:middle;color:#f3f3f3" title="GALERI"><i class="fa fa-images fa-4x zoom"></i></a> </td>
